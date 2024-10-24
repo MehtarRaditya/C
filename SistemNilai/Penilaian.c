@@ -8,17 +8,23 @@ char predikatFunc(float total);
 
 int main(void){
   float nilaiUTS, nilaiUAS, nilaiTugas;
-  const int bobotUAS = 50;
-  const int bobotTugas = 20;
 
-  printf("Masukkan Nilai Awal UTS: ");
-  scanf("%f", &nilaiUTS);
+  do
+  {
+    printf("Masukkan nilai diantara 0-100\n");
 
-  printf("Masukkan Nilai Awal UAS: ");
-  scanf("%f", &nilaiUAS);
+    printf("Masukkan Nilai Awal UTS: ");
+    scanf("%f", &nilaiUTS);
 
-  printf("Masukkan Nilai Awal Tugas: ");
-  scanf("%f", &nilaiTugas);
+    printf("Masukkan Nilai Awal UAS: ");
+    scanf("%f", &nilaiUAS);
+
+    printf("Masukkan Nilai Awal Tugas: ");
+    scanf("%f", &nilaiTugas);
+  } while ((nilaiUTS >= 100 || nilaiUTS <= 0) 
+    || (nilaiUAS >= 100 || nilaiUAS <= 0)
+    || (nilaiTugas >= 100 || nilaiTugas <= 0)
+    );
 
   float UTS = utsFunc(nilaiUTS);
   printf("Nilai UTS Setelah Pembobotan: %.2f\n", UTS);
@@ -45,9 +51,9 @@ float utsFunc(float nilaiUTS){
 
 float uasFunc(float nilaiUAS){
   const int bobotUAS = 50;
-  float UTS = (nilaiUAS*bobotUAS)/100;
+  float UAS = (nilaiUAS*bobotUAS)/100;
 
-  return UTS;
+  return UAS;
 }
 
 float tugasFunc(float nilaiTugas){

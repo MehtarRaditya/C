@@ -1,5 +1,11 @@
 #include <stdio.h>
-int main() {
-   printf("Ok");
-   return 0;
+
+void hello(){
+    printf("test");
+}
+
+int main () {
+ hello();
+
+ return 0;
 }

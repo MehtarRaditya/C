@@ -5,7 +5,7 @@ int main(void) {
     float jarak, pertamaxTurbo;
 
     printf("Masukkan waktu lalu kecepatan: ");
-    scanf("%f %f", &waktu, &kecepatan);
+    scanf("%f\n%f", &waktu, &kecepatan);
 
     printf("Waktu: %f jam\n", waktu);
     printf("Kecepatan: %f rata-rata\n", kecepatan);
