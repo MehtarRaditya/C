@@ -64,5 +64,6 @@ test.*
 
 #Folder
 /Password
+/UAS
 
 # End of https://www.toptal.com/developers/gitignore/api/c
